@@ -1,0 +1,17 @@
+site_name: API Design Systems
+theme:
+  name: material
+  features:
+    - navigation.instant
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+nav:
+  - Overview: index.md
+  - guidelines.md
+  - specification.md
+  - standards.md
+  - Example: example.md
+  - changelog.md
