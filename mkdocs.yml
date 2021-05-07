@@ -12,6 +12,7 @@ nav:
   - Overview: index.md
   - guidelines.md
   - specification.md
+  - principles.md
   - standards.md
   - Example: example.md
   - changelog.md

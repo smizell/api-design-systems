@@ -6,21 +6,36 @@ This document defines the specification for defining API Design Systems. It's no
 
 - `version`: `2021-05-07` - current version of the specification
 - `info` (Info)
-- `standards` (array[Standard])
-- `design_system` (array[Design System])
+- `principles` (array[[Principle](#principle)]) - requirements for API principles
+- `standards` (array[[Standard](#standard)]) - requirements around standards
+- `scenarios` (array[[Scenario](#scenario)]) - requirements based on scenarios
 
 ## Info (object)
 
 - `title` - title of API Design System
 - `description` (optional) - description of the API Design System
 
-## Standard
+## Principle
+
+A principle is something that's harder to build tools around. However, it's important to capture principles that help guide decisions in building APIs. See the [Principles](principles.md) for available ones.
 
 - `name` - name used to reference them standard throughout the document
-- `url` - URL to documentation for the standard
+- `description` (optional) - description of the principle requirement
+- `level` (enum[Requirement Level])
+- `iri` - IRI for the principle
 
-## Design System (object)
+## Standard
 
+The best place to find available standards is at [Web Concepts](https://webconcepts.info/).
+
+- `name` - name used to reference them standard throughout the document
+- `description` (optional) - description of the standard requirement
+- `level` (enum[Requirement Level])
+- `iri` - IRI for the standard
+
+## Scenario
+
+- `description` (optional) - description of the scenario
 - `when` (Standard Identifier) - references the condition when a requirement applies
 - `then` (array[Requirement]) - what to do when the `when` condition is met
 

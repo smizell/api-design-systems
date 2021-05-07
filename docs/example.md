@@ -12,12 +12,13 @@ info:
   title: Paypal API Guidelines
 standards:
   - name: error.json
-    url: https://github.com/paypal/api-standards/blob/master/v1/schema/json/draft-04/error.json
-design_system:
+    level: may
+    iri: https://github.com/paypal/api-standards/blob/master/v1/schema/json/draft-04/error.json
+scenarios:
   - when: [http, transaction]
     then:
       - subject: [http, request, method]
-        requirement: may
+        level: may
         values:
           - get
           - post
@@ -25,7 +26,7 @@ design_system:
           - delete
           - patch
       - subject: [http, request, header]
-        requirement: may
+        level: may
         values:
           - Accept
           - Accept-Charset
@@ -34,7 +35,7 @@ design_system:
           - Link
           - Prefer
       - subject: [http, response, header]
-        requirement: may
+        level: may
         values:
           - Content-Language
           - Content-Type
@@ -42,7 +43,7 @@ design_system:
           - Location
           - Prefer
       - subject: [http, request, header, Prefer]
-        requirement: may
+        level: may
         values:
           - respond-async
           - read-consistent
@@ -51,13 +52,13 @@ design_system:
           - return=representation
           - return=minimal
       - subject: [http, message, header, Content-Type]
-        requirement: should
+        level: should
         values:
           - application/json
   - when: [http, request, method, get]
     then:
       - subject: [http, response, status_code]
-        requirement: may
+        level: may
         values:
           - "200"
           - "400"
@@ -67,7 +68,7 @@ design_system:
   - when: [http, request, method, post]
     then:
       - subject: [http, response, status_code]
-        requirement: may
+        level: may
         values:
           - "200"
           - "201"
@@ -79,7 +80,7 @@ design_system:
   - when: [http, request, method, put]
     then:
       - subject: [http, response, status_code]
-        requirement: may
+        level: may
         values:
           - "200"
           - "202"
@@ -91,7 +92,7 @@ design_system:
   - when: [http, request, method, patch]
     then:
       - subject: [http, response, status_code]
-        requirement: may
+        level: may
         values:
           - "200"
           - "204"
@@ -102,7 +103,7 @@ design_system:
   - when: [http, request, method, delete]
     then:
       - subject: [http, response, status_code]
-        requirement: may
+        level: may
         values:
           - "200"
           - "204"
@@ -119,36 +120,36 @@ design_system:
   - when: [http, message, body]
     then:
       - subject: [http, message, header]
-        requirement: must
+        level: must
         values:
           - Content-Type
   - when: [http, response, status_code, "201"]
     then:
       - subject: [http, response, header]
-        requirement: must_not
+        level: must_not
         values:
           - Link
           - Location
   - when: [http, response, status_code, redirect]
     then:
       - subject: [http, response, header]
-        requirement: must_not
+        level: must_not
         values:
           - Link
           - Location
   - when: [http, response, status_code, client_error]
     then:
       - subject: [http, message, body]
-        requirement: must
+        level: must
         follow: error.json
   - when: [http, response, status_code, server_error]
     then:
       - subject: [http, response, body]
-        requirement: must
+        level: must
         follow: error.json
   - when: [http, response, status_code, success]
     then:
       - subject: [http, response, body]
-        requirement: must_not
+        level: must_not
         follow: error.json
 ```
