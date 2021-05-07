@@ -4,7 +4,7 @@
 
 If you're working in a company that is building lots of APIs and want your teams to build APIs that are consistent and follow standards, you could define an API Design System and use it as a way to communicate what people can and can't do. You'll want tooling that uses the API Design System document to automate audits.
 
-## How do you write a requirement?
+## How do you write a scenario?
 
 Let's say we want to specify what status codes people can use for a `GET` request.
 

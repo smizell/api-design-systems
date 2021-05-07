@@ -1,4 +1,7 @@
 site_name: API Design Systems
+repo_url: https://github.com/smizell/api-design-systems
+repo_name: smizell/api-design-systems
+edit_uri: edit/main/docs
 theme:
   name: material
   features:
