@@ -4,7 +4,7 @@ title: Overview
 
 # API Design Systems
 
-An API Design System is a collection of curated standards, guidelines, practices, and principles aimed at helping teams build consistent, quality APIs.
+An API Design System is a collection of curated standards, guidelines, practices, and principles aimed at helping teams build consistent, quality APIs. If this is your first time checking this out, have a look at the [example](example.md), read the overview below, and check out the [guidelines](guidelines.md). The [specification](specification.md) has more technical details about the format.
 
 ## Overview
 
