@@ -18,11 +18,11 @@ API Design Systems borrows from these idea. A company should be able to define s
 
 People can define an API Design System in a machine-readable format so they can build tools and documentation around it. Like how people created OpenAPI out of a need to get API definitions out of text and into something machine-readable, API Design Systems does the same.
 
-## Possible applications
+## Possible uses for this format
 
 * A tool that looks through an OpenAPI file to manage compliance
 * A tool that looks at HTTP traffic to make sure it's compliant
-* A tool that renders the document to something human-readable
+* A tool that renders the document to something human-readable for the API Design System
 * A tool to generate a checklist for people to use when evaluating APIs
 
 ## Project status

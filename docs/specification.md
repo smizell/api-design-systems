@@ -19,19 +19,41 @@ This document defines the specification for defining API Design Systems. It's no
 
 A principle is something that's harder to build tools around. However, it's important to capture principles that help guide decisions in building APIs. See the [Principles](principles.md) for available ones.
 
-- `name` - name used to reference them standard throughout the document
+- `name` (optional) - name used to reference them standard throughout the document
 - `description` (optional) - description of the principle requirement
-- `level` (enum[Requirement Level])
 - `iri` - IRI for the principle
+- `level` (enum[Requirement Level])
+
+### Example
+
+```yaml
+principles:
+  - iri: urn:apidesign.systems:principle:robustness
+    level: must
+  - iri: urn:apidesign.systems:principle:rmm:level2
+    level: should
+  - iri: urn:apidesign.systems:principle:rmm:level3
+    level: may
+```
 
 ## Standard
 
 The best place to find available standards is at [Web Concepts](https://webconcepts.info/).
 
-- `name` - name used to reference them standard throughout the document
+- `name` (optional) - name used to reference them standard throughout the document
 - `description` (optional) - description of the standard requirement
 - `level` (enum[Requirement Level])
 - `iri` - IRI for the standard
+
+### Example
+
+```yaml
+standards:
+  - iri: urn:ietf:rfc:7232
+    level: may
+  - iri: urn:ietf:rfc:7396 
+    level: should
+```
 
 ## Scenario
 
@@ -39,13 +61,15 @@ The best place to find available standards is at [Web Concepts](https://webconce
 - `when` (Standard Identifier) - references the condition when a requirement applies
 - `then` (array[Requirement]) - what to do when the `when` condition is met
 
-##  Requirement
+See [Example](example.md) for a full example using scenarios.
+
+## Requirement
 
 - `subject` (Standard Identifier) - references to the standard the requirement applies to
 - `level` (enum[Requirement Level])
 - OneOf
-    - `values` (array[string]) - acceptable values for the `subject` based on the requirement level
-    - `follows` - reference to a `name` from the defined `standards` the `subject` addresses based on the requirement level
+  - `values` (array[string]) - acceptable values for the `subject` based on the requirement level
+  - `follows` - reference to a `name` from the defined `standards` the `subject` addresses based on the requirement level
 
 ## Standard Identifier (array[string])
 
