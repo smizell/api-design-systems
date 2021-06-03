@@ -25,7 +25,7 @@ Read more about [YAGNI](https://martinfowler.com/bliki/Yagni.html).
 - `urn:apidesign.systems:principle:rmm:level2`
 - `urn:apidesign.systems:principle:rmm:level3`
 
-Read more about the [RMM](https://en.wikipedia.org/wiki/Richardson_Maturity_Model).
+Read more about the [RMM](https://www.crummy.com/writing/speaking/2008-QCon/) and also on [Martin Fowler's site](https://www.martinfowler.com/articles/richardsonMaturityModel.html).
 
 ## Web API Design Maturity Model (WADM)
 
