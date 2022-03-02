@@ -4,7 +4,7 @@ title: Example
 
 # API Design System Example
 
-This is an example of what an API Design System might look like. It's based on [Paypal's API guidelines](https://github.com/paypal/api-standards/blob/master/api-style-guide.md), though it only describes a part of their guidelines at this point.
+This is an example of what an API Design System might look like. It's based on [Paypal's API guidelines](https://github.com/paypal/api-standards/blob/master/http-api-style-guide.md), though it only describes a part of their guidelines at this point.
 
 ```yaml
 version: "2021-05-07"
@@ -13,7 +13,7 @@ info:
 standards:
   - name: error.json
     level: may
-    iri: https://github.com/paypal/api-standards/blob/master/v1/schema/json/draft-04/error.json
+    iri: https://github.com/paypal/api-standards/blob/master/common-components/v1/schema/json/openapi-2.0/error.json
 scenarios:
   - when: [http, transaction]
     then:

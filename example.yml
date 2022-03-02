@@ -3,8 +3,9 @@ info:
   title: Paypal API Guidelines
 standards:
   - name: error.json
-    url: https://github.com/paypal/api-standards/blob/master/v1/schema/json/draft-04/error.json
-design_system:
+    level: may
+    iri: https://github.com/paypal/api-standards/blob/master/common-components/v1/schema/json/openapi-2.0/error.json
+scenarios:
   - when: [http, transaction]
     then:
       - subject: [http, request, method]
