@@ -26,7 +26,7 @@ Used for defining requirements around HTTP responses.
 
     * `HEADER_NAME` - valid HTTP header
 
-* `[http, request, body]` - generally refers to the HTTP response body
+* `[http, request, body]` - generally refers to the HTTP request body
 
 ### Response
 
